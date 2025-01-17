@@ -1,5 +1,14 @@
 import { useEffect, useRef } from "react";
 
+const particleColors = [
+  "rgba(59, 130, 246, 0.8)",
+  "rgba(255, 255, 255, 0.8)",
+  "rgba(59, 130, 246, 0.5)",
+  "rgba(255, 255, 255, 0.5)",
+  "rgba(59, 130, 246, 0.1)",
+  "rgba(255, 255, 255, 0.1)",
+]
+
 class Particle {
   x: number;
   y: number;
@@ -9,6 +18,7 @@ class Particle {
 
   private static ctx: CanvasRenderingContext2D;
   private static canvas: HTMLCanvasElement;
+  private particleColor: string;
 
   static setCanvas(canvas: HTMLCanvasElement) {
     Particle.canvas = canvas;
@@ -26,9 +36,10 @@ class Particle {
   constructor() {
     this.x = Math.random() * Particle.canvas.width;
     this.y = Math.random() * Particle.canvas.height;
-    this.size = Math.random() * 5 + 1;
-    this.speedX = Math.random() * 3 - 1.5;
-    this.speedY = Math.random() * 3 - 1.5;
+    this.size = Math.random() * 10 + 1;
+    this.speedX = Math.random() * 5 - 1.5;
+    this.speedY = Math.random() * 5 - 5;
+    this.particleColor = particleColors[Math.floor(Math.random() * particleColors.length)];
   }
 
   update() {
@@ -39,8 +50,8 @@ class Particle {
   }
 
   draw() {
-    Particle.ctx.fillStyle = "rgba(59, 130, 246, 0.8)";
-    Particle.ctx.strokeStyle = "rgba(59, 130, 246, 0.8)";
+    Particle.ctx.fillStyle = this.particleColor;
+    Particle.ctx.strokeStyle = this.particleColor;
     Particle.ctx.lineWidth = 2;
 
     Particle.ctx.beginPath();
@@ -85,7 +96,7 @@ export function AnimatedBackground() {
       if (particles.length < particleCount) {
         particles.push(new Particle());
       }
-      
+
       handleParticles();
       return requestAnimationFrame(animate);
     }

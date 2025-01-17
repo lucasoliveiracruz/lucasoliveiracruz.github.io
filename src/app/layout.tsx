@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Fira_Code } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const font = Fira_Code({ subsets: ['latin'] })
+const font = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Meu Portfólio',

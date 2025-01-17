@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Input } from './ui/input'
+import { Textarea } from './ui/textarea'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,16 +22,15 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Aqui você pode adicionar a lógica para enviar o formulário
     console.log('Formulário enviado:', formData)
-    // Limpar o formulário após o envio
     setFormData({ name: '', email: '', message: '' })
   }
 
   return (
     <section id="contact" className="py-20 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-blue-600 dark:text-blue-400">Contato</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center text-blue-600 dark:text-blue-400">Vamos conversar?</h2>
+        <p className="text-base text-center mb-8">Deixe sua mensagem, será um prazer falar com você!</p>
         <motion.form
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,13 +42,12 @@ export default function Contact() {
             <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 font-bold mb-2">
               Nome
             </label>
-            <input
+            <Input
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 dark:text-gray-300 border dark:border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 bg-white dark:bg-gray-800"
               required
             />
           </div>
@@ -55,13 +55,12 @@ export default function Contact() {
             <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 font-bold mb-2">
               Email
             </label>
-            <input
+            <Input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 dark:text-gray-300 border dark:border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 bg-white dark:bg-gray-800"
               required
             />
           </div>
@@ -69,15 +68,14 @@ export default function Contact() {
             <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 font-bold mb-2">
               Mensagem
             </label>
-            <textarea
+            <Textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-gray-700 dark:text-gray-300 border dark:border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 bg-white dark:bg-gray-800"
               rows={4}
               required
-            ></textarea>
+            ></Textarea>
           </div>
           <motion.button
             type="submit"

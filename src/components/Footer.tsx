@@ -1,4 +1,5 @@
-import { FaHeart } from 'react-icons/fa'
+import { me } from "@/data";
+import { FaHeart } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -6,12 +7,15 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-gray-600 dark:text-gray-300">&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+            <p className="text-gray-600 dark:text-gray-300">
+              &copy; {new Date().getFullYear()} {me.name}. All rights reserved.
+            </p>
           </div>
           <div className="flex items-center">
-            <span className="text-gray-600 dark:text-gray-300 mr-2">Created with</span>
+            <span className="text-gray-600 dark:text-gray-300 mr-2">
+              Created with
+            </span>
             <FaHeart className="text-red-500 mx-1" />
-            <span className="text-gray-600 dark:text-gray-300 ml-2">and v0 help</span>
           </div>
         </div>
         <div className="mt-4 text-center">
@@ -21,6 +25,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
