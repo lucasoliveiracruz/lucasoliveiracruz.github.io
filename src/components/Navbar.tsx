@@ -21,7 +21,7 @@ const navItems: NavItem[] = [
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('')
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     const handleScroll = () => {
