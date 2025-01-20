@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
+import { HighlightedSubtitle } from './ui/highlight-text'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -29,8 +30,8 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-4 text-center text-blue-600 dark:text-blue-400">{`/* Vamos conversar? */`}</h2>
-        <p className="text-base text-center mb-8">Deixe sua mensagem, será um prazer falar com você!</p>
+        <HighlightedSubtitle className="text-center">Vamos conversar?</HighlightedSubtitle>
+        <p className="text-base text-slate-800 dark:text-white text-center mb-8">Deixe sua mensagem, será um prazer falar com você!</p>
         <motion.form
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

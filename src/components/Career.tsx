@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Experience, experiences } from "@/data";
 import { iconsWordMap } from "@/data/icons-word-map";
 import { SiShowwcase } from "react-icons/si";
+import { HighlightedSubtitle } from "./ui/highlight-text";
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
@@ -18,9 +19,9 @@ export default function Career() {
   return (
     <section id="career" className="py-20 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-blue-600 dark:text-blue-400">
-          {`/* Minha Carreira */`}
-        </h2>
+        <HighlightedSubtitle className="text-center">
+          Minha Carreira
+        </HighlightedSubtitle>
         <div className="relative">
           {experiences.map((exp, index) => (
             <motion.div
