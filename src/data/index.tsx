@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
     company: "Loggi",
     positions: [
       {
-        title: "Desenvolvedor Front-end",
+        title: "Desenvolvedor Front-end II",
         description:
           "Desenvolvimento de aplicativos mobile, com foco em performance e usabilidade. Manutenção de aplicações web.",
       },
@@ -40,7 +40,7 @@ export const experiences: Experience[] = [
     company: "PJBank Pagamentos S.A.",
     positions: [
       {
-        title: "Desenvolvedor mobile sênior",
+        title: "Desenvolvedor mobile Sênior",
         period: {
           start: new Date(2022, 9),
           end: new Date(2024, 8),
@@ -48,24 +48,24 @@ export const experiences: Experience[] = [
         description:
           "Desenvolvimento de aplicativos mobile, com foco em performance e usabilidade. Manutenção de aplicações web.",
       },
-      {
-        title: "Desenvolvedor mobile pleno",
-        period: {
-          start: new Date(2021, 9),
-          end: new Date(2022, 8),
-        },
-        description:
-          "Desenvolvimento de aplicativos mobile, com foco em performance e usabilidade. Manutenção de aplicações web.",
-      },
-      {
-        title: "Desenvolvedor mobile junior",
-        period: {
-          start: new Date(2019, 9),
-          end: new Date(2021, 8),
-        },
-        description:
-          "Desenvolvimento de aplicativos mobile, com foco em performance e usabilidade. Manutenção de aplicações web.",
-      },
+      // {
+      //   title: "Desenvolvedor Mobile I",
+      //   period: {
+      //     start: new Date(2021, 9),
+      //     end: new Date(2022, 8),
+      //   },
+      //   description:
+      //     "Desenvolvimento de aplicativos mobile, com foco em performance e usabilidade. Manutenção de aplicações web.",
+      // },
+      // {
+      //   title: "Desenvolvedor Mobile Junior IV",
+      //   period: {
+      //     start: new Date(2019, 9),
+      //     end: new Date(2021, 8),
+      //   },
+      //   description:
+      //     "Desenvolvimento de aplicativos mobile, com foco em performance e usabilidade. Manutenção de aplicações web.",
+      // },
     ],
     period: {
       start: new Date(2019, 9),
@@ -124,6 +124,7 @@ export const me = {
   socials: {
     linkedin: "https://linkedin.com/in/lucasoliveiracruz",
     github: "https://github.com/lucasoliveiracruz",
+    site: "https://lucasoliveiracruz.github.io",
   },
   about: [
     `Sou Lucas, desenvolvedor front-end especialista em React Native. Com mais de ${xpYearsCount} anos de experiência em desenvolvimento e ${xpYearsCount - 1} anos focado em mobile`,

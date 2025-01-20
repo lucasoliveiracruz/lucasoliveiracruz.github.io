@@ -29,7 +29,7 @@ export default function About() {
           className="md:w-1/2 md:pl-10"
         >
           <h2 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">
-            Sobre Mim
+            {`/* Sobre Mim */`}
           </h2>
           {me.about.map((content, i) => (
             <p key={i} className="text-gray-700 dark:text-gray-300 mb-4">{content}</p>

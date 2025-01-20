@@ -32,9 +32,11 @@ export default function Home() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-5xl font-bold mb-4 text-blue-600 dark:text-blue-400"
+          className="text-5xl font-bold mb-4 text-blue-600 flex dark:text-blue-400"
         >
-          {me.name}
+          <p className="text-slate-500" >{"<"}</p>
+          {me.name.split(" ").join('')}
+          <p className="text-slate-500 ml-4">{"/>"}</p>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -30 }}
